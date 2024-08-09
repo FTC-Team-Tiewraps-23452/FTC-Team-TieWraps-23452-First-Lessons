@@ -14,13 +14,12 @@ import com.qualcomm.robotcore.hardware.Servo;
  */
 public class ExampleSubsystem {
 
-    //Declare motor and servo objects
+    //Declare motor objects
     private  DcMotor myMotor;
-    private Servo myServo;
+
 
     //Define positions and other variables of the subsystem
-    private double downPosition = 0.1;
-    private double upPosition = 0.5;
+    private double presetSpeed = 0.2;
 
     /**
      * This is the constructor of the subsystem
@@ -53,33 +52,14 @@ public class ExampleSubsystem {
          * This gives a bit more precision while controlling the motors
          */
         myMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-
-        // Servos can also be extracted from the hardwareMap similar to DC motors
-        myServo = hardwareMap.get(Servo.class, "servo1");
     }
 
     /*
     * After the constructor the functions of the subsystem can be defined.
-    * For this example subsystems the functions are:
-    * flipDown,
-    * flipUp,
+    * For this example subsystems the function is:
     * setMotorSpeed
      */
 
-
-    /**
-     * Example of a function which moves a servo to a certain position
-     */
-    public void flipDown(){
-        myServo.setPosition(downPosition);
-    }
-
-    /**
-     * Example of a function which moves a servo to a certain position
-     */
-    public void flipUp(){
-        myServo.setPosition(upPosition);
-    }
 
     /**
      * Example of a function to set a motor to a certain speed

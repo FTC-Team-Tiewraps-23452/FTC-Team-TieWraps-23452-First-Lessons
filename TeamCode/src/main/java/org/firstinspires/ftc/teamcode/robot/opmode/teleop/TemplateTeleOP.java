@@ -89,15 +89,6 @@ public class TemplateTeleOP extends OpMode
          * Execute the functions of the example subsystem based on controller input
          */
 
-        //If a is pressed on the 1st controller, the example subsystem has to execute the function 'flipDown'
-        if (gamepad1.a){
-            exampleSubsystem.flipDown();
-        }
-        //If a is not pressed, but b is pressed, the example subsystem has to execute the function 'flipUp'
-        else if(gamepad1.b){
-            exampleSubsystem.flipUp();
-        }
-
         //The example subsystem also has a motor which can be set to a certain speed
         //This speed is determined by the left stick of the 2nd controller
         //The y position of the stick is the input of the function
