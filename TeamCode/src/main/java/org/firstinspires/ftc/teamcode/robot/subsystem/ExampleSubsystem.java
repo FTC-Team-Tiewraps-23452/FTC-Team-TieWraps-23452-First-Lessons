@@ -16,7 +16,6 @@ public class ExampleSubsystem {
     //Declare motor objects
     private  DcMotor myMotor;
 
-
     //Define positions and other variables of the subsystem
     private double presetSpeed = 0.2;
 
